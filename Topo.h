@@ -190,9 +190,9 @@ void Topo::toposort()
 
 		for (i = 1; i <= sizeTerm; i++)
 		{
-			v = q[Term].front();                 //取出第term学期开课的第一个课程
-			q[Term].pop();                       //将第term学期开课的第一个课程出队列
-			schedule[Term].push(v);    //将第term学期开课的第一个课程排进课表
+			v = q[Term].front();                 //取出第term学期开课的课程
+			q[Term].pop();                       //将第term学期开课的课程出队列
+			schedule[Term].push(v);    //将第term学期开课的课程排进课表
 			for (w = FirstAdjVex(v); w != -1; w = NextAdjVex(v, w))
 			{
 				indegree[w]--;           //w节点的入度减一
