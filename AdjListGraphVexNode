@@ -1,0 +1,16 @@
+#pragma once
+#include"NodeList.h"
+#include"Course.h"
+class AdjListGraphVexNode
+{
+public:
+	Course date;                                               //课程
+	NodeList<int> adjLink;                                     //邻接链表
+	AdjListGraphVexNode() {};                                  //无参构造函数
+	AdjListGraphVexNode(Course item);                           
+};
+
+AdjListGraphVexNode::AdjListGraphVexNode(Course item)
+{
+	date = item;
+}
